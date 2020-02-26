@@ -51,7 +51,7 @@ method.convertLatLngToUtm = function (latitude, longitude,precision)
             }
         }
     }
-    ZoneNumber = parseInt(ZoneNumber);
+    ZoneNumber = parseInt(33);
 
     var LongOrigin = (ZoneNumber - 1) * 6 - 180 + 3;  //+3 puts origin in middle of zone
     var LongOriginRad = this.toRadians(LongOrigin);
