@@ -13,7 +13,7 @@ function UTMLatLng(datumNameIn) {
     this.setEllipsoid(datumName);
 }
 
-method.convertLatLngToUtm = function (latitude, longitude,precision)
+method.convertLatLngToUtm = function (latitude, longitude,precision, zoneNumber)
 {
     if (this.status)
     {
@@ -52,6 +52,7 @@ method.convertLatLngToUtm = function (latitude, longitude,precision)
         }
     }
     ZoneNumber = parseInt(33);
+    ZoneNumber = zoneNumber || ZoneNumber
 
     var LongOrigin = (ZoneNumber - 1) * 6 - 180 + 3;  //+3 puts origin in middle of zone
     var LongOriginRad = this.toRadians(LongOrigin);
